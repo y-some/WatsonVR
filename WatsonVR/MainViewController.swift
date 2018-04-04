@@ -55,6 +55,9 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             print("画像リサイズエラー")
             fatalError()
         }
+
+        //　activityIndicator開始
+        self.activityIndicator.startAnimating()
         
         // APIコール
         ApiService().callApi(image: resizedImage) {
