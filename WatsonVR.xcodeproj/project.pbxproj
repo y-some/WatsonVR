@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31073FF71FFB115100370730 /* FaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31073FF61FFB115100370730 /* FaceData.swift */; };
+		31374BC32073664D00CC8A81 /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31374BC22073664D00CC8A81 /* apikey.plist */; };
+		3143A4B61E04C60B001FF7A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143A4B51E04C60B001FF7A3 /* AppDelegate.swift */; };
+		3143A4BB1E04C60B001FF7A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3143A4B91E04C60B001FF7A3 /* Main.storyboard */; };
+		3143A4BD1E04C60B001FF7A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3143A4BC1E04C60B001FF7A3 /* Assets.xcassets */; };
+		3143A4C01E04C60B001FF7A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3143A4BE1E04C60B001FF7A3 /* LaunchScreen.storyboard */; };
+		3143A4C81E04C6F3001FF7A3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143A4C71E04C6F3001FF7A3 /* MainViewController.swift */; };
+		3143A4CC1E04C87E001FF7A3 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3143A4CB1E04C87E001FF7A3 /* SubTableViewController.swift */; };
+		318A436020746FFE00D843AF /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318A435F20746FFE00D843AF /* ApiService.swift */; };
+		319088C31FFE36B30003EF11 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319088C21FFE36B30003EF11 /* Extension.swift */; };
+		31E386881E056DA30004DC89 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E386871E056DA30004DC89 /* ResultTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		31073FF61FFB115100370730 /* FaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceData.swift; sourceTree = "<group>"; };
+		31374BC22073664D00CC8A81 /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
+		3143A4B21E04C60B001FF7A3 /* WatsonVR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatsonVR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3143A4B51E04C60B001FF7A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3143A4BA1E04C60B001FF7A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3143A4BC1E04C60B001FF7A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3143A4BF1E04C60B001FF7A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3143A4C11E04C60B001FF7A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3143A4C71E04C6F3001FF7A3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3143A4CB1E04C87E001FF7A3 /* SubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
+		318A435F20746FFE00D843AF /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		319088C21FFE36B30003EF11 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		31E386871E056DA30004DC89 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3143A4AF1E04C60B001FF7A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3143A4A91E04C60A001FF7A3 = {
+			isa = PBXGroup;
+			children = (
+				3143A4B41E04C60B001FF7A3 /* WatsonVR */,
+				3143A4B31E04C60B001FF7A3 /* Products */,
+				3143A4CD1E04D706001FF7A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3143A4B31E04C60B001FF7A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3143A4B21E04C60B001FF7A3 /* WatsonVR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3143A4B41E04C60B001FF7A3 /* WatsonVR */ = {
+			isa = PBXGroup;
+			children = (
+				3143A4B51E04C60B001FF7A3 /* AppDelegate.swift */,
+				3143A4B91E04C60B001FF7A3 /* Main.storyboard */,
+				3143A4C71E04C6F3001FF7A3 /* MainViewController.swift */,
+				3143A4CB1E04C87E001FF7A3 /* SubTableViewController.swift */,
+				31E386871E056DA30004DC89 /* ResultTableViewCell.swift */,
+				318A435F20746FFE00D843AF /* ApiService.swift */,
+				31073FF61FFB115100370730 /* FaceData.swift */,
+				319088C21FFE36B30003EF11 /* Extension.swift */,
+				3143A4BC1E04C60B001FF7A3 /* Assets.xcassets */,
+				3143A4BE1E04C60B001FF7A3 /* LaunchScreen.storyboard */,
+				3143A4C11E04C60B001FF7A3 /* Info.plist */,
+				31374BC22073664D00CC8A81 /* apikey.plist */,
+			);
+			path = WatsonVR;
+			sourceTree = "<group>";
+		};
+		3143A4CD1E04D706001FF7A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3143A4B11E04C60B001FF7A3 /* WatsonVR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3143A4C41E04C60B001FF7A3 /* Build configuration list for PBXNativeTarget "WatsonVR" */;
+			buildPhases = (
+				3143A4AE1E04C60B001FF7A3 /* Sources */,
+				3143A4AF1E04C60B001FF7A3 /* Frameworks */,
+				3143A4B01E04C60B001FF7A3 /* Resources */,
+				3143A4D01E04D724001FF7A3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatsonVR;
+			productName = WatsonVR;
+			productReference = 3143A4B21E04C60B001FF7A3 /* WatsonVR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3143A4AA1E04C60A001FF7A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Yasuyuki Someya";
+				TargetAttributes = {
+					3143A4B11E04C60B001FF7A3 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = T97E8ZWW3A;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3143A4AD1E04C60A001FF7A3 /* Build configuration list for PBXProject "WatsonVR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3143A4A91E04C60A001FF7A3;
+			productRefGroup = 3143A4B31E04C60B001FF7A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3143A4B11E04C60B001FF7A3 /* WatsonVR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3143A4B01E04C60B001FF7A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3143A4C01E04C60B001FF7A3 /* LaunchScreen.storyboard in Resources */,
+				31374BC32073664D00CC8A81 /* apikey.plist in Resources */,
+				3143A4BD1E04C60B001FF7A3 /* Assets.xcassets in Resources */,
+				3143A4BB1E04C60B001FF7A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3143A4D01E04D724001FF7A3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3143A4AE1E04C60B001FF7A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31073FF71FFB115100370730 /* FaceData.swift in Sources */,
+				3143A4B61E04C60B001FF7A3 /* AppDelegate.swift in Sources */,
+				3143A4CC1E04C87E001FF7A3 /* SubTableViewController.swift in Sources */,
+				319088C31FFE36B30003EF11 /* Extension.swift in Sources */,
+				31E386881E056DA30004DC89 /* ResultTableViewCell.swift in Sources */,
+				318A436020746FFE00D843AF /* ApiService.swift in Sources */,
+				3143A4C81E04C6F3001FF7A3 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3143A4B91E04C60B001FF7A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3143A4BA1E04C60B001FF7A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3143A4BE1E04C60B001FF7A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3143A4BF1E04C60B001FF7A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3143A4C21E04C60B001FF7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3143A4C31E04C60B001FF7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3143A4C51E04C60B001FF7A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T97E8ZWW3A;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = WatsonVR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.jp.WatsonVR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3143A4C61E04C60B001FF7A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T97E8ZWW3A;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = WatsonVR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.jp.WatsonVR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3143A4AD1E04C60A001FF7A3 /* Build configuration list for PBXProject "WatsonVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3143A4C21E04C60B001FF7A3 /* Debug */,
+				3143A4C31E04C60B001FF7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3143A4C41E04C60B001FF7A3 /* Build configuration list for PBXNativeTarget "WatsonVR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3143A4C51E04C60B001FF7A3 /* Debug */,
+				3143A4C61E04C60B001FF7A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3143A4AA1E04C60A001FF7A3 /* Project object */;
+}
