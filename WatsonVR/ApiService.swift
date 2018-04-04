@@ -32,8 +32,14 @@ class ApiService {
         var request = URLRequest(url: destURL)
         request.httpMethod = "POST"
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.httpBody = UIImageJPEGRepresentation(image, 1)
-        
+        // API仕様の画像サイズを超えないようにリサイズしてからAPIコールする
+        // WatsonVR detect_faces APIの仕様により画像サイズは最大2MG（2016年12月現在）
+        guard let resizedImage = image.fixedOrientation()?.resizeImage(maxSize: 2097152) else {
+            print("画像リサイズエラー")
+            fatalError()
+        }
+        request.httpBody = UIImageJPEGRepresentation(resizedImage, 1)
+
         // WatsonAPIコール
         let task = URLSession.shared.dataTask(with: request) {
             data, response, error in
@@ -47,7 +53,7 @@ class ApiService {
                 do {
                     // APIレスポンス：正常
                     let faceData = try JSONDecoder().decode(FaceData.self, from: data)
-                    appDelegate.analyzedFaces = self.interpret(image: image, parsedData: faceData)
+                    appDelegate.analyzedFaces = self.interpret(image: resizedImage, parsedData: faceData)
                 } catch {
                     // JSONデコードエラー
                     print("JSONデコードエラー：\n" + error.localizedDescription)

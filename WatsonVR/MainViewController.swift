@@ -49,18 +49,11 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         guard let selectedImage = selectedImageView.image else {
             return
         }
-        // API仕様の画像サイズを超えないようにリサイズしてからAPIコールする
-        // WatsonVR detect_faces APIの仕様により画像サイズは最大2MG（2016年12月現在）
-        guard let resizedImage = selectedImage.fixedOrientation()?.resizeImage(maxSize: 2097152) else {
-            print("画像リサイズエラー")
-            fatalError()
-        }
-
         //　activityIndicator開始
         self.activityIndicator.startAnimating()
         
         // APIコール
-        ApiService().callApi(image: resizedImage) {
+        ApiService().callApi(image: selectedImage) {
             // リクエストは非同期のため画面遷移をmainQueueで行わないとエラーになる
             OperationQueue.main.addOperation(
                 {
