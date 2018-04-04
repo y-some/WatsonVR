@@ -6,8 +6,6 @@
 //  Copyright © 2018年 Yasuyuki Someya. All rights reserved.
 //
 
-import Foundation
-
 /// Watson VR APIのレスポンスをCodableに準拠させた構造体
 struct FaceData: Codable {
     struct Faces: Codable {
