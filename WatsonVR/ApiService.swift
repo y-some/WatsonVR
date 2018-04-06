@@ -17,7 +17,7 @@ class ApiService {
     func callApi(image: UIImage, completionHandler: @escaping () -> Void) {
         // 解析結果はAppDelegateの変数を経由してSubViewに渡す
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
-        
+
         // API呼び出し準備（※API Keyをapikey.plistに設定しておく必要があります。キー名は"apikey"。）
         var urlComponents = URLComponents(string: "https://gateway-a.watsonplatform.net/visual-recognition/api/v3/detect_faces")!
         guard let APIKey = fetchApiKey() else {
@@ -78,38 +78,36 @@ class ApiService {
     /// - parameter parsedData: パース後データ
     /// - returns: AnalyzedFace型の配列
     private func interpret(image: UIImage, parsedData: FaceData) -> [AnalyzedFace] {
-        var analyzedFaces = [AnalyzedFace]()
         let parsedFaces = parsedData.images[0].faces
-        // レスポンスのimageFaces要素は配列となっている（複数人が映った画像の解析が可能）
-        for parsedFace in parsedFaces {
+        // レスポンスのimageFaces要素は配列となっている（複数人が映った画像の解析が可能）。それを抽出しながらAnalyzedFace型の配列に変換する
+        return parsedFaces.map {
             let analyzedFace = AnalyzedFace()
             // 性別およびスコア
-            if parsedFace.gender.gender == "MALE" {
+            if $0.gender.gender == "MALE" {
                 analyzedFace.gender = "男性"
             } else {
                 analyzedFace.gender = "女性"
             }
-            analyzedFace.genderScore = String(floor(parsedFace.gender.score * 1000) / 10)
+            analyzedFace.genderScore = String(floor($0.gender.score * 1000) / 10)
             // 年齢およびスコア
-            analyzedFace.ageMin = String(parsedFace.age.min)
-            if let max = parsedFace.age.max {
+            analyzedFace.ageMin = String($0.age.min)
+            if let max = $0.age.max {
                 analyzedFace.ageMax = String(max)
             }
-            analyzedFace.ageScore = String(floor(parsedFace.age.score * 1000) / 10)
+            analyzedFace.ageScore = String(floor($0.age.score * 1000) / 10)
             // Identity
-            if let identity = parsedFace.identity?.name {
+            if let identity = $0.identity?.name {
                 analyzedFace.identity = identity
             }
-            let left = parsedFace.face_location.left
-            let top = parsedFace.face_location.top
-            let width = parsedFace.face_location.width
-            let height = parsedFace.face_location.height
+            let left = $0.face_location.left
+            let top = $0.face_location.top
+            let width = $0.face_location.width
+            let height = $0.face_location.height
             // 元画像から切り抜いて変数にセット
             analyzedFace.image = cropping(image: image, left: CGFloat(left), top: CGFloat(top), width: CGFloat(width), height: CGFloat(height))
             // 抽出完了
-            analyzedFaces.append(analyzedFace)
+            return analyzedFace
         }
-        return analyzedFaces
     }
     
     /// 元画像から矩形を切り抜く
